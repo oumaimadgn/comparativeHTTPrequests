@@ -1,0 +1,32 @@
+spring:
+  cloud:
+    consul:
+      host: localhost
+      port: 8500
+      discovery:
+        service-name: SERVICE-CAR
+        health-check-path: /actuator/health
+        health-check-interval: 10s
+  application:
+    name: SERVICE-CAR
+  datasource:
+    url: jdbc:mysql://localhost:3306/carservicedb?createDatabaseIfNotExist=true
+    username: root
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health
+  endpoint:
+    health:
+      show-details: always
+server:
+  port: 8091

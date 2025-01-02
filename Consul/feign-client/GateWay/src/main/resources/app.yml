@@ -1,0 +1,20 @@
+spring:
+  cloud:
+    gateway:
+      routes:
+        - id: r1
+          uri: http://localhost:8090
+          predicates:
+            - Path=/SERVICE-CLIENT/**
+        - id: r2
+          uri: http://localhost:8090
+          predicates:
+            - Path=/SERVICE-CLIENT/**
+        - id: r3
+          uri: http://localhost:8091
+          predicates:
+            - Path=/SERVICE-VOITURE/**
+        - id: r4
+          uri: http://localhost:8091
+          predicates:
+            - Path=/SERVICE-VOITURE/**

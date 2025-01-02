@@ -1,0 +1,25 @@
+server:
+  port: 8888
+
+spring:
+  application:
+    name: Gateway
+  cloud:
+    consul:
+      host: localhost
+      port: 8500
+      discovery:
+        service-name: Gateway
+        health-check-path: /actuator/health
+        health-check-interval: 10s
+    discovery:
+      enabled: true
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health
+  endpoint:
+    health:
+      show-details: always
