@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/TP_EUREKA.iml" filepath="$PROJECT_DIR$/.idea/TP_EUREKA.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/web-client.iml" filepath="$PROJECT_DIR$/.idea/web-client.iml" />
     </modules>
   </component>
 </project>
